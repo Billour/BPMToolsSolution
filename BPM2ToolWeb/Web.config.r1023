@@ -1,0 +1,225 @@
+﻿<?xml version="1.0"?>
+<configuration>
+	<configSections>
+    <!-- Configuration For Agile Point -->
+    <sectionGroup name="Primax">
+      <sectionGroup name="Bin">
+        <section name="Base" type="System.Configuration.NameValueSectionHandler"/>
+        <section name="Process" type="System.Configuration.NameValueSectionHandler"/>
+      </sectionGroup>
+      <sectionGroup name="Test">
+        <section name="Base" type="System.Configuration.NameValueSectionHandler"/>
+        <section name="Process" type="System.Configuration.NameValueSectionHandler"/>
+      </sectionGroup>
+      <sectionGroup name="QA">
+        <section name="Base" type="System.Configuration.NameValueSectionHandler"/>
+        <section name="Process" type="System.Configuration.NameValueSectionHandler"/>
+      </sectionGroup>
+      <sectionGroup name="Production">
+        <section name="Base" type="System.Configuration.NameValueSectionHandler"/>
+        <section name="Process" type="System.Configuration.NameValueSectionHandler"/>
+      </sectionGroup>
+    </sectionGroup>
+
+    <section name="dataConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSettings, Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="true"/>
+    <sectionGroup name="system.web.extensions" type="System.Web.Configuration.SystemWebExtensionsSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+			<sectionGroup name="scripting" type="System.Web.Configuration.ScriptingSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+				<section name="scriptResourceHandler" type="System.Web.Configuration.ScriptingScriptResourceHandlerSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+				<sectionGroup name="webServices" type="System.Web.Configuration.ScriptingWebServicesSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+					<section name="jsonSerialization" type="System.Web.Configuration.ScriptingJsonSerializationSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="Everywhere"/>
+					<section name="profileService" type="System.Web.Configuration.ScriptingProfileServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+					<section name="authenticationService" type="System.Web.Configuration.ScriptingAuthenticationServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+					<section name="roleService" type="System.Web.Configuration.ScriptingRoleServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+				</sectionGroup>
+			</sectionGroup>
+		</sectionGroup>
+	</configSections>
+	<appSettings/>
+  <dataConfiguration defaultDatabase="Portal"/>
+  <connectionStrings>
+    <!--<add name="Portal" connectionString="Server=WBTSAI-PC;Database=HR_PORTAL;Trusted_Connection=false;User=sa;Password=marklin;Connect Timeout=30" providerName="System.Data.SqlClient"/>-->
+    <add name="Portal" connectionString="Database=HR_PORTAL;Server=10.1.2.87;Trusted_Connection=false;User=BPMHR;Password=Prim@xHR;Connect Timeout=30" providerName="System.Data.SqlClient"/>
+    <!--<add name="Portal" connectionString="Database=BPM_PORTAL;Server=10.1.2.86\SQLExpress;Trusted_Connection=false;User=sa;Password=Primax0123;Connect Timeout=30" providerName="System.Data.SqlClient"/>-->
+    <!--<add name="BPM" connectionString="Server=192.168.239.134;Database=BPM;Trusted_Connection=false;User=sa;Password=;Connect Timeout=30" providerName="System.Data.SqlClient"/>
+    <add name="HR" connectionString="Database=PRIMAX_ORG;Server=WBTSAI-PC\SQLExpress;Trusted_Connection=false;User=sa;Password=marklin;Connect Timeout=30" providerName="System.Data.SqlClient"/>-->
+    <add name="Portal_87_Production" connectionString="Database=HR_Portal_Prod;Server=10.1.2.87;Trusted_Connection=false;User=BPMHR;Password=Prim@xHR;Connect Timeout=30" providerName="System.Data.SqlClient"/>
+    <!--<add name="Portal_87_Production" connectionString="Database=HR_Portal_Prod;Server=10.1.2.86;Trusted_Connection=false;User=sa;Password=Primax0123;Connect Timeout=30" providerName="System.Data.SqlClient"/>-->
+    <add name="Portal_87_Test" connectionString="Database=HR_PORTAL;Server=10.1.2.87;Trusted_Connection=false;User=BPMHR;Password=Prim@xHR;Connect Timeout=30" providerName="System.Data.SqlClient"/>
+    <add name="Portal_Bin" connectionString="Server=WBTSAI-PC;Database=HR_PORTAL;Trusted_Connection=false;User=sa;Password=marklin;Connect Timeout=30" providerName="System.Data.SqlClient"/>
+    <add name="Portal_86" connectionString="Database=HR_PORTAL;Server=10.1.2.86;Trusted_Connection=false;User=sa;Password=Primax0123;Connect Timeout=30" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+	<system.web>
+		<!-- 
+            Set compilation debug="true" to insert debugging 
+            symbols into the compiled page. Because this 
+            affects performance, set this value to true only 
+            during development.
+        -->
+		<compilation debug="true">
+			<assemblies>
+				<add assembly="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+				<add assembly="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+				<add assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+				<add assembly="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+			</assemblies>
+		</compilation>
+		<!--
+            The <authentication> section enables configuration 
+            of the security authentication mode used by 
+            ASP.NET to identify an incoming user. 
+        -->
+		<authentication mode="Windows"/>
+		<!--
+            The <customErrors> section enables configuration 
+            of what to do if/when an unhandled error occurs 
+            during the execution of a request. Specifically, 
+            it enables developers to configure html error pages 
+            to be displayed in place of a error stack trace.
+
+        <customErrors mode="RemoteOnly" defaultRedirect="GenericErrorPage.htm">
+            <error statusCode="403" redirect="NoAccess.htm" />
+            <error statusCode="404" redirect="FileNotFound.htm" />
+        </customErrors>
+        -->
+		<pages>
+			<controls>
+				<add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+				<add tagPrefix="asp" namespace="System.Web.UI.WebControls" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			</controls>
+		</pages>
+		<httpHandlers>
+			<remove verb="*" path="*.asmx"/>
+			<add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add verb="*" path="*_AppService.axd" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" validate="false"/>
+		</httpHandlers>
+		<httpModules>
+			<add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+		</httpModules>
+	</system.web>
+
+  <Primax>
+    <!-- 文斌的開發環境 -->
+    <Bin>
+      <Base>
+        <add key="DB" value="Portal_Bin"/>
+      </Base>
+      <Process>
+        <!-- 彈性工時 -->
+        <add key="SF" value="B2CF7D817A534E67BFEA14BFBBAB0A0D"/>
+        <!--台灣請假申請-->
+        <add key="LT" value="3047CA92E751438899467FA5DB228125"/>
+        <!-- 請假取消 -->
+        <add key="CT" value="F5D69766A10B4A838EB3DD590B86E784"/>
+        <!-- 延休申請 -->
+        <add key="HC" value="96DD848667A044F2A87577FBDA3DA938"/>
+        <!-- 加班申請 -->
+        <add key="OT" value="DE2CBCC3A2BE4552B51B7E2DF3CF6B98"/>
+        <!-- 年度休假計劃申請 -->
+        <add key="SV" value="E9079E53F7524D4BA62764229FA54450"/>
+      </Process>
+    </Bin>
+    <!-- 目前Portal正式機連Agile 測試機 -->
+    <Test>
+       <Base>
+         <add key="DB" value="Portal_87_Test"/>
+       </Base>
+      <Process>
+        <!-- 彈性工時 -->
+        <add key="SF" value="2A1A13747CA740D9AB72B427FAF9F21B"/>
+        <!--台灣請假申請-->
+        <add key="LT" value="A4466470DDBA4723B6DAFE6F71792891"/>
+        <!-- 請假取消 -->
+        <add key="CT" value="D1374D6BA7F546BD95F7A86E1FF9FB9D"/>
+        <!-- 延休申請 -->
+        <add key="HC" value="153537D172334C5FB2A813F9EFAB23EB"/>
+        <!-- 加班申請 -->
+        <add key="OT" value="B16C9BAA5A1649459350ADDAD89931BA"/>
+        <!-- 年度休假計劃申請 -->
+        <add key="SV" value="8552517199304CCDA010832CB11041D3"/>
+      </Process>
+    </Test>
+    <!-- QA 機連 Agile VM 機 -->
+    <QA>
+      <Base>
+        <add key="DB" value="Portal_86"/>
+      </Base>
+      <Process>
+        <!-- 彈性工時申請 -->
+        <add key="SF" value="B2CF7D817A534E67BFEA14BFBBAB0A0D"/>
+        <!--台灣請假申請-->
+        <add key="LT" value="3047CA92E751438899467FA5DB228125"/>
+        <!-- 請假取消申請 -->
+        <add key="CT" value="F5D69766A10B4A838EB3DD590B86E784"/>
+        <!-- 延休申請 -->
+        <add key="HC" value="96DD848667A044F2A87577FBDA3DA938"/>
+        <!-- 加班申請 -->
+        <add key="OT" value="DE2CBCC3A2BE4552B51B7E2DF3CF6B98"/>
+        <!-- 年度休假計劃申請 -->
+        <add key="SV" value="E9079E53F7524D4BA62764229FA54450"/>
+      </Process>
+    </QA>
+    <!-- 正式機連Agile 正式機 -->
+    <Production>
+      <Base>
+        <add key="DB" value="Portal_87_Production"/>
+      </Base>
+      <Process>
+        <!-- 彈性工時 -->
+        <add key="SF" value="CB8634EEEAAB4795B14E165048312BF0"/>
+        <!--台灣請假申請-->
+        <add key="LT" value="185E81A33A054624A938249BA2457297"/>
+        <!-- 請假取消 -->
+        <add key="CT" value="F705F1CD13B14E81B74597E359E7FAB7"/>
+        <!-- 延休申請 -->
+        <add key="HC" value="337BA4E42C754CAEB6003CE29513C6FA"/>
+        <!-- 加班申請 -->
+        <add key="OT" value="6EC9063099FE401F8272E1943CEABB58"/>
+        <!-- 年度休假計劃申請 -->
+        <add key="SV" value="EC8C07808C694367956E368453D0CFF7"/>
+      </Process>
+    </Production>
+    
+  </Primax>
+  
+	<system.codedom>
+		<compilers>
+			<compiler language="c#;cs;csharp" extension=".cs" warningLevel="4" type="Microsoft.CSharp.CSharpCodeProvider, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+				<providerOption name="CompilerVersion" value="v3.5"/>
+				<providerOption name="WarnAsError" value="false"/>
+			</compiler>
+		</compilers>
+	</system.codedom>
+	<!-- 
+        The system.webServer section is required for running ASP.NET AJAX under Internet
+        Information Services 7.0.  It is not necessary for previous version of IIS.
+    -->
+	<system.webServer>
+		<validation validateIntegratedModeConfiguration="false"/>
+		<modules>
+			<remove name="ScriptModule"/>
+			<add name="ScriptModule" preCondition="managedHandler" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+		</modules>
+		<handlers>
+			<remove name="WebServiceHandlerFactory-Integrated"/>
+			<remove name="ScriptHandlerFactory"/>
+			<remove name="ScriptHandlerFactoryAppServices"/>
+			<remove name="ScriptResource"/>
+			<add name="ScriptHandlerFactory" verb="*" path="*.asmx" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add name="ScriptHandlerFactoryAppServices" verb="*" path="*_AppService.axd" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add name="ScriptResource" preCondition="integratedMode" verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+		</handlers>
+	</system.webServer>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Extensions" publicKeyToken="31bf3856ad364e35"/>
+				<bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/>
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Extensions.Design" publicKeyToken="31bf3856ad364e35"/>
+				<bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/>
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+</configuration>

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Helper/HtmlParser
+END
+vssver2.scc
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Helper/HtmlParser/vssver2.scc
+END
+HtmlElement.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Helper/HtmlParser/HtmlElement.cs
+END
+HtmlParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Helper/HtmlParser/HtmlParser.cs
+END
+HtmlDocument.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Helper/HtmlParser/HtmlDocument.cs
+END
+HtmlEncoder.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Helper/HtmlParser/HtmlEncoder.cs
+END
+HtmlAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Helper/HtmlParser/HtmlAttribute.cs
+END
+HtmlText.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Helper/HtmlParser/HtmlText.cs
+END
+HtmlNode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Helper/HtmlParser/HtmlNode.cs
+END

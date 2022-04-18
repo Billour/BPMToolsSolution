@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PRIMAX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RULE_ENGINE>
+    <RULES>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=6 && #RANK#.substr(1)<=8 && #OVER_TIME_TYPE#=="WEEKDAY"]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="COMPARED_VALUE"><![CDATA[0]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=9 && #OVER_TIME_TYPE#=="WEEKDAY"]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="COMPARED_VALUE"><![CDATA[1]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=6 && #RANK#.substr(1)<=9 && #OVER_TIME_TYPE#=="HOLIDAY"]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="COMPARED_VALUE"><![CDATA[0]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=10 && #OVER_TIME_TYPE#=="HOLIDAY"]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="COMPARED_VALUE"><![CDATA[1]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=6 && #RANK#.substr(1)<=11 && #OVER_TIME_TYPE#=="NATIONAL"]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="COMPARED_VALUE"><![CDATA[0]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=12  && #OVER_TIME_TYPE#=="NATIONAL"]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="COMPARED_VALUE"><![CDATA[1]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+    </RULES>
+    <PARAMETERS>
+      <PARAMETER ID="RANK" DISPLAY="職級" TYPE="string" BINDING="USER.RANK" VALUE="0" />
+      <PARAMETER ID="COMPARED_VALUE" DISPLAY="比較值" TYPE="decimal" BINDING="" VALUE="-1" />
+      <PARAMETER ID="OVER_TIME_TYPE" DISPLAY="加班類型" TYPE="string" BINDING="$OVER_TIME_TYPE" VALUE="" />
+    </PARAMETERS>
+  </RULE_ENGINE>
+</PRIMAX>

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Primax_HR/!svn/ver/953/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity
+END
+MailTemplateEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/Primax_HR/!svn/ver/256/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/MailTemplateEntity.cs
+END
+ProcessEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Primax_HR/!svn/ver/953/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/ProcessEntity.cs
+END
+ProcessPropertyEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/ProcessPropertyEntity.cs
+END
+OrgRefEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/OrgRefEntity.cs
+END
+BussinessNumberEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Primax_HR/!svn/ver/321/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/BussinessNumberEntity.cs
+END
+FlowsEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/FlowsEntity.cs
+END
+ActivityCommandEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/ActivityCommandEntity.cs
+END
+GroupProcessEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/GroupProcessEntity.cs
+END
+ActivityEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/ActivityEntity.cs
+END
+FlowPersonEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/FlowPersonEntity.cs
+END
+FormPageEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/FormPageEntity.cs
+END
+BussinessPolicy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/BussinessPolicy.cs
+END
+FlowEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/FlowEntity.cs
+END
+BaseProcessEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/BaseProcessEntity.cs
+END
+BussinessJobEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Flow/Entity/BussinessJobEntity.cs
+END

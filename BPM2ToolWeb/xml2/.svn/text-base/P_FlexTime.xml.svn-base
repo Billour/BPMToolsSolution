@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Flows>
+  <BaseProcess>
+    <!-- 
+        彈性工時流程資料
+    -->
+    <Code>SF</Code>
+    <Name>彈性工時申請</Name>
+    <Description>HR 彈性工時申請</Description>
+  </BaseProcess>
+
+  <Flow>
+	  <BussinessJob>
+		  
+	  </BussinessJob>
+	  <BussinessNumber>
+		  		  
+	  </BussinessNumber>
+	  
+    <Process>
+      
+      <Name>彈性工時申請</Name>
+      <Path>Primax.Dao.FlexTime.FlexTimeForm.xml,Primax.Dao</Path>
+      <AllowDelegate>true</AllowDelegate>
+      <Impersonate>false</Impersonate>
+      <FlowType>1</FlowType>
+      <Description>HR系統</Description>
+    </Process>
+
+    <Oraganization>
+      <ID>1003</ID>
+      <Company>PTW2</Company>
+    </Oraganization>
+    <Property>
+      <Type>String</Type>
+      <Name>ORGANIZATION_ID</Name>
+      <Map>//WF_HEAD/ORGANIZATION_ID</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>COST_CENTER_ID</Name>
+      <Map>//WF_HEAD/COST_CENTER_ID</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>ORGANIZATIONAL_UNIT_ID</Name>
+      <Map>//WF_HEAD/ORGANIZATIONAL_UNIT_ID</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>APPLICANT</Name>
+      <Map>//WF_HEAD/APPLICANT</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>PREPAREDBY_USER</Name>
+      <Map>//WF_HEAD/PREPAREDBY_USER</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>SERVICE_LEVEL</Name>
+      <Map>//WF_HEAD/SERVICE_LEVEL</Map>
+    </Property>
+	  <Property>
+		  <Type>String</Type>
+		  <Name>COMPLETED_MAIL_TO_USERS</Name>
+		  <Map>//WF_HEAD/COMPLETED_MAIL_TO_USERS</Map>
+	  </Property>
+	  <Property>
+		  <Type>decimal</Type>
+		  <Name>COMPARED_VALUE</Name>
+		  <Map>1</Map>
+	  </Property>
+    <Property>
+      <Type>string</Type>
+      <Name>MEMO</Name>
+      <Map>//WF_HEAD/MEMO</Map>
+    </Property>
+    <Property>
+      <Type>string</Type>
+      <Name>FLEX_TIME</Name>
+      <Map>//WF_BODY/@SELECT_FLEXTIME</Map>
+    </Property>
+    <Property>
+      <Type>string</Type>
+      <Name>BPMPORTAL_SITE</Name>
+      <Map>//WF_BODY/BPMPORTAL_SITE</Map>
+    </Property>
+    <Property>
+      <Type>string</Type>
+      <Name>ALERT_USERS_FINISH</Name>
+      <Map>//WF_BODY/ALERT_USERS_FINISH</Map>
+    </Property>
+    <Form>
+      <ID>201</ID>
+      <Name>InitialForm</Name>
+      <Title>彈性工時申請</Title>
+      <WebPath>FlexTime/InitialForm.aspx</WebPath>
+      <IsInitialForm>true</IsInitialForm>
+    </Form>
+    <Form>
+      <ID>202</ID>
+      <Name>ApprovalForm</Name>
+      <Title>彈性工時申請單_簽核</Title>
+      <WebPath>FlexTime/ApprovalForm.aspx</WebPath>
+      <IsInitialForm>false</IsInitialForm>
+    </Form>
+
+    <!-- 所有的頁面資料 
+      1	INITIAL	1	提交	
+      2	APPROVE	1	同意	
+      3	REJECT	1	退回	
+      4	REJECT_TO_PREVIOUS	1	退回前一階	
+      6	TRANSFER	1	轉單	
+      7	COSIGN	1	會簽	
+      8	NOTIFY	1	通知	
+      9	CANCEL	1	銷單	
+      12	PRINT	1	列印	
+      13	RESUBMIT	1	重新提交	
+      
+    -->
+
+    <Activity>
+      <Code>A0</Code>
+      <Name>啟動流程</Name>
+      <Type>W</Type>
+      <Parameters></Parameters>
+      <CommandProperty>
+        <CommandID>1</CommandID>
+        <Text>提交</Text>
+      </CommandProperty>
+    </Activity>
+    <Activity>
+      <Code>A1</Code>
+      <Name>填寫申請單</Name>
+      <Type>U</Type>
+      <Parameters>User=$PREPAREDBY_USER</Parameters>
+
+    </Activity>
+
+    <Activity>
+      <Code>A2</Code>
+      <Name>部門主管逐級簽核</Name>
+      <Type>S</Type>
+      <Parameters>SequentialType=OU;SequentialStart=$ORGANIZATIONAL_UNIT_ID;RoleSet=;RuleSet=彈性工時主管核決權限表</Parameters>
+      <CommandProperty>
+        <CommandID>2</CommandID>
+        <Text>同意</Text>
+      </CommandProperty>
+      <CommandProperty>
+        <CommandID>3</CommandID>
+        <Text>退回</Text>
+      </CommandProperty>
+    </Activity>
+	  
+  </Flow>
+
+</Flows>

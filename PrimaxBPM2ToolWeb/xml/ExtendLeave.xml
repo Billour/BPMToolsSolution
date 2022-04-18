@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Flows>
+  <BaseProcess>
+    <!-- 
+        ID= Identity 
+        此ID 會自動產生，與Process 整合
+    -->
+    <Code>LE</Code>
+    <Name>HR_延休申請</Name>
+    <Description>HR 延休申請</Description>
+  </BaseProcess>
+
+  <Flow>
+    <Process>
+      <ID>306A29067BE44F569470C49FDE41105A</ID>
+      <Name>HR_延休申請</Name>
+      <Path>Primax.HR.WebApp.Portal.WFApplications.ExtensionLeave.ExtensionLeave.xml,Primax.HR.WebApp</Path>
+      <AllowDelegate>true</AllowDelegate>
+      <Impersonate>false</Impersonate>
+      <FlowType>1</FlowType>
+      <Description>人資系統</Description>
+    </Process>
+
+    <Oraganization>
+      <ID>1003</ID>
+      <Company>UTD3</Company>
+    </Oraganization>
+    <Property>
+      <Type>String</Type>
+      <Name>ORGANIZATION_ID</Name>
+      <Map>//WF_HEAD/ORGANIZATION_ID</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>COST_CENTER_ID</Name>
+      <Map>//WF_HEAD/COST_CENTER_ID</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>ORGANIZATIONAL_UNIT_ID</Name>
+      <Map>//WF_HEAD/ORGANIZATIONAL_UNIT_ID</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>APPLICANT</Name>
+      <Map>//WF_HEAD/APPLICANT</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>PREPAREDBY_USER</Name>
+      <Map>//WF_HEAD/PREPAREDBY_USER</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>SERVICE_LEVEL</Name>
+      <Map>//WF_HEAD/SERVICE_LEVEL</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>SIGN_USER</Name>
+      <Map>//WF_BODY/SIGN_USER</Map>
+    </Property>
+    <Property>
+      <Type>Boolean</Type>
+      <Name>IS_PASS</Name>
+      <Map>//WF_BODY/IS_PASS</Map>
+    </Property>
+    <Form>
+      <ID>200</ID>
+      <Name>InitialForm</Name>
+      <Title>延休申請單</Title>
+      <WebPath>ExtensionLeave/InitialForm.aspx</WebPath>
+      <IsInitialForm>true</IsInitialForm>
+    </Form>
+    <Form>
+      <ID>101</ID>
+      <Name>ApprovalForm</Name>
+      <Title>延休審核單</Title>
+      <WebPath>ExtensionLeave/ApprovalForm.aspx</WebPath>
+      <IsInitialForm>false</IsInitialForm>
+    </Form>
+
+    <!-- 所有的頁面資料 
+      1	INITIAL	1	提交	
+      2	APPROVE	1	同意	
+      3	REJECT	1	退回	
+      4	REJECT_TO_PREVIOUS	1	退回前一階	
+      6	TRANSFER	1	轉單	
+      7	COSIGN	1	會簽	
+      8	NOTIFY	1	通知	
+      9	CANCEL	1	銷單	
+      12	PRINT	1	列印	
+      13	RESUBMIT	1	重新提交	
+      
+    -->
+
+    <Activity>
+      <Code>A0</Code>
+      <Name>啟動流程</Name>
+      <Type>W</Type>
+      <Parameters></Parameters>
+      <CommandProperty>
+        <CommandID>1</CommandID>
+        <Text>提交</Text>
+      </CommandProperty>
+    </Activity>
+    <Activity>
+      <Code>A1</Code>
+      <Name>填寫申請單</Name>
+      <Type>U</Type>
+      <Parameters>User=$PREPAREDBY_USER</Parameters>
+      
+    </Activity>
+    
+    <Activity>
+      <Code>A2</Code>
+      <Name>指定簽核審核</Name>
+      <Type>S</Type>
+      <Parameters>User=$SIGN_USER</Parameters>
+      <CommandProperty>
+        <CommandID>2</CommandID>
+        <Text>同意</Text>
+      </CommandProperty>
+      <CommandProperty>
+        <CommandID>3</CommandID>
+        <Text>退回</Text>
+      </CommandProperty>
+    </Activity>
+  </Flow>
+
+</Flows>
+

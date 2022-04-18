@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Flows>
+  <BaseProcess>
+    <!-- 
+        ID= Identity 
+        此ID 會自動產生，與Process 整合
+    -->
+    <Code>LA</Code>
+    <Name>人事休假系統</Name>
+    <Description>預設用</Description>
+  </BaseProcess>
+  
+  <Flow>
+    <Process>
+      <ID>A174FD18BDAF4FE498B049C77B54B552</ID> 
+      <Name>人事休假系統(台灣)</Name>
+      <Path>MyForm.UI.Leave.xml,MyForm</Path>
+      <AllowDelegate>true</AllowDelegate>
+      <Impersonate>false</Impersonate>
+      <FlowType>1</FlowType>                     
+      <Description>人資系統</Description>
+    </Process>
+    
+    <Oraganization>
+      <ID>1001</ID>
+      <Company>UDT3</Company>
+    </Oraganization>
+      <Property>
+        <Type>String</Type>
+        <Name>ORGANIZATION_ID</Name>
+        <Map>//WF_HEAD/ORGANIZATION_ID</Map>
+      </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>COST_CENTER_ID</Name>
+      <Map>//WF_HEAD/COST_CENTER_ID</Map>
+    </Property>
+      <Form>
+        <ID>100</ID>
+        <Name>InitialForm</Name>
+        <Title>休假申請單</Title>
+        <WebPath>Leave/InitialForm.aspx</WebPath>
+        <IsInitialForm>true</IsInitialForm>
+      </Form>
+    <Form>
+      <ID>101</ID>
+      <Name>ApproveForm</Name>
+      <Title>休假審核單</Title>
+      <WebPath>Leave/ApprovalForm.aspx</WebPath>
+      <IsInitialForm>false</IsInitialForm>
+    </Form>
+
+   <!-- 所有的頁面資料 
+      1	INITIAL	1	提交	
+      2	APPROVE	1	同意	
+      3	REJECT	1	退回	
+      4	REJECT_TO_PREVIOUS	1	退回前一階	
+      6	TRANSFER	1	轉單	
+      7	COSIGN	1	會簽	
+      8	NOTIFY	1	通知	
+      9	CANCEL	1	銷單	
+      12	PRINT	1	列印	
+      13	RESUBMIT	1	重新提交	
+      
+    -->
+        
+      <Activity>
+        <Code>A0</Code>
+        <Name>啟動流程</Name>
+        <Type>W</Type>
+        <Parameters>RULESET=休假權限檢核</Parameters>
+      </Activity>
+    <Activity>
+      <Code>A1</Code>
+      <Name>填寫申請單</Name>
+      <Type>U</Type>
+      <Parameters>User=$PREPAREDBY_USER</Parameters>
+      <CommandProperty>
+        <CommandID>1</CommandID>
+        <Text>提交</Text>
+      </CommandProperty>
+    </Activity>
+    <Activity>
+      <Code>A2</Code>
+      <Name>指派工作給申請人</Name>
+      <Type>U</Type>
+      <Parameters>User=$APPLICANT</Parameters>
+      <CommandProperty>
+        <CommandID>2</CommandID>
+        <Text>同意</Text>
+      </CommandProperty>
+    </Activity>
+    <Activity>
+      <Code>A3</Code>
+      <Name>單位主管審核</Name>
+      <Type>S</Type>
+      <Parameters>SequentialType=OU;SequentialStart=$ORGANIZATIONAL_UNIT_ID;RoleSet=;RuleScope=$ORGANIZATION_ID;RuleSet=休假審核權限;CompareField=LEAVE_DAYS</Parameters>
+      <CommandProperty>
+        <CommandID>2</CommandID>
+        <Text>同意</Text>
+      </CommandProperty>
+      <CommandProperty>
+        <CommandID>3</CommandID>
+        <Text>退回</Text>
+      </CommandProperty>
+    </Activity>
+  </Flow>
+    
+</Flows> 

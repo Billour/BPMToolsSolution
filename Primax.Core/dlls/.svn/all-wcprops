@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/dlls
+END
+Microsoft.SqlServer.Smo.dll
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/dlls/Microsoft.SqlServer.Smo.dll
+END
+Microsoft.Practices.Unity.dll
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/dlls/Microsoft.Practices.Unity.dll
+END
+Microsoft.Practices.EnterpriseLibrary.Common.dll
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/dlls/Microsoft.Practices.EnterpriseLibrary.Common.dll
+END
+System.Data.SQLite.dll
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/dlls/System.Data.SQLite.dll
+END
+log4net.dll
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/dlls/log4net.dll
+END
+Microsoft.Practices.EnterpriseLibrary.Data.dll
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/dlls/Microsoft.Practices.EnterpriseLibrary.Data.dll
+END
+Microsoft.SqlServer.SqlEnum.dll
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/dlls/Microsoft.SqlServer.SqlEnum.dll
+END
+Microsoft.Practices.ObjectBuilder2.dll
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/dlls/Microsoft.Practices.ObjectBuilder2.dll
+END
+Microsoft.SqlServer.Management.Sdk.Sfc.dll
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/dlls/Microsoft.SqlServer.Management.Sdk.Sfc.dll
+END
+Microsoft.SqlServer.ConnectionInfo.dll
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/dlls/Microsoft.SqlServer.ConnectionInfo.dll
+END

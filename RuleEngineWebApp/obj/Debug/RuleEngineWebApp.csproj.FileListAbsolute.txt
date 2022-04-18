@@ -1,0 +1,14 @@
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\bin\RuleEngineWebApp.dll
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\bin\RuleEngineWebApp.pdb
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\bin\Microsoft.Practices.ObjectBuilder2.dll
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\bin\Microsoft.Practices.Unity.dll
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\bin\Primax.Foundation.dll
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\bin\Primax.Portal.BusinessLayer.dll
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\bin\Microsoft.Office.Interop.Excel.dll
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\bin\Microsoft.Vbe.Interop.dll
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\bin\office.dll
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\obj\Debug\ResolveAssemblyReference.cache
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\obj\Debug\RuleEngineWebApp.dll
+D:\PrimaxHR1221_Portal6\BPMToolsSolution\RuleEngineWebApp\obj\Debug\RuleEngineWebApp.pdb

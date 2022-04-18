@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Data/Attributes
+END
+DataContextColumnAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Data/Attributes/DataContextColumnAttribute.cs
+END
+DataContextMapAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Data/Attributes/DataContextMapAttribute.cs
+END
+SQLPrefixAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Data/Attributes/SQLPrefixAttribute.cs
+END
+ColumnNameAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/Primax.Core/Data/Attributes/ColumnNameAttribute.cs
+END

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Flows>
+  <BaseProcess>
+    <!-- 
+        大陸東聚集體加班申請
+    -->
+    <Code>OG</Code>
+    <Name>大陸東聚集體加班申請</Name>
+    <Description>大陸東聚集體加班申請</Description>
+  </BaseProcess>
+  <Flow>
+    <BussinessJob>
+
+    </BussinessJob>
+    <BussinessNumber>
+
+    </BussinessNumber>
+
+    <Process>
+      <Path>Primax.Dao.CNDonJuGroupOverTimeApply.CNDonJuGroupOverTimeApplyForm.xml,Primax.Dao</Path>
+    </Process>
+
+    <Oraganization>
+      <Company>PCH2</Company>
+    </Oraganization>
+    <Oraganization>
+      <Company>PKS1</Company>
+    </Oraganization>
+    <Property>
+      <Type>String</Type>
+      <Name>ORGANIZATION_ID</Name>
+      <Map>//WF_HEAD/ORGANIZATION_ID</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>COST_CENTER_ID</Name>
+      <Map>//WF_HEAD/COST_CENTER_ID</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>ORGANIZATIONAL_UNIT_ID</Name>
+      <Map>//WF_HEAD/ORGANIZATIONAL_UNIT_ID</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>APPLICANT</Name>
+      <Map>//WF_HEAD/APPLICANT</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>PREPAREDBY_USER</Name>
+      <Map>//WF_HEAD/PREPAREDBY_USER</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>SERVICE_LEVEL</Name>
+      <Map>//WF_HEAD/SERVICE_LEVEL</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>MEMO</Name>
+      <Map>//WF_HEAD/MEMO</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>COMPARED_VALUE</Name>
+      <Map>1</Map>
+    </Property>
+    <Property>
+      <Type>Integer</Type>
+      <Name>SUBMIT_COUNT</Name>
+      <Map>//WF_HEAD/SUBMIT_COUNT</Map>
+    </Property>
+    <Property>
+      <Type>String</Type>
+      <Name>COMPLETED_MAIL_TO_USERS</Name>
+      <Map>//WF_HEAD/COMPLETED_MAIL_TO_USERS</Map>
+    </Property>
+    <Form>
+      <!--<ID>301</ID>-->
+      <Name>InitialForm</Name>
+      <Title>大陸東聚集體加班申請</Title>
+      <WebPath>CNDonJuGroupOverTimeApply/InitialForm.aspx</WebPath>
+      <IsInitialForm>true</IsInitialForm>
+    </Form>
+    <Form>
+      <!--<ID>302</ID>-->
+      <Name>ApprovalForm</Name>
+      <Title>大陸東聚集體加班申請_審核單</Title>
+      <WebPath>CNDonJuGroupOverTimeApply/ApprovalForm.aspx</WebPath>
+      <IsInitialForm>false</IsInitialForm>
+    </Form>
+
+    <!-- 所有的頁面資料 
+      1	INITIAL	1	提交	
+      2	APPROVE	1	同意	
+      3	REJECT	1	退回	
+      4	REJECT_TO_PREVIOUS	1	退回前一階	
+      6	TRANSFER	1	轉單	
+      7	COSIGN	1	會簽	
+      8	NOTIFY	1	通知	
+      9	CANCEL	1	銷單	
+      12	PRINT	1	列印	
+      13	RESUBMIT	1	重新提交	
+      
+    -->
+
+    <Activity>
+      <Code>A0</Code>
+      <Name>啟動流程</Name>
+      <Type>W</Type>
+      <Parameters></Parameters>
+      <CommandProperty>
+        <CommandID>1</CommandID>
+        <Text>提交</Text>
+      </CommandProperty>
+    </Activity>
+    <Activity>
+      <Code>A1</Code>
+      <Name>填寫申請單</Name>
+      <Type>U</Type>
+      <Parameters>User=$PREPAREDBY_USER</Parameters>
+
+    </Activity>
+
+    <Activity>
+      <Code>A2</Code>
+      <Name>部門主管逐級簽核</Name>
+      <Type>S</Type>
+      <Parameters>SequentialType=OU;SequentialStart=$ORGANIZATIONAL_UNIT_ID;</Parameters>
+      <CommandProperty>
+        <CommandID>2</CommandID>
+        <Text>同意</Text>
+      </CommandProperty>
+      <CommandProperty>
+        <CommandID>3</CommandID>
+        <Text>退回</Text>
+      </CommandProperty>
+    </Activity>
+
+
+  </Flow>
+</Flows>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PRIMAX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RULE_ENGINE>
+    <RULES>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("P")==0]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="LEAVE_DAYS"><![CDATA[0]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)<=5]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="LEAVE_DAYS"><![CDATA[0]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=6 && #RANK#.substr(1)<=8]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="LEAVE_DAYS"><![CDATA[1]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#=="L9"]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="LEAVE_DAYS"><![CDATA[2]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#=="L10"]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="LEAVE_DAYS"><![CDATA[9]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=11]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="LEAVE_DAYS"><![CDATA[10]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+    </RULES>
+    <PARAMETERS>
+      <PARAMETER ID="RANK" DISPLAY="職級" TYPE="string" BINDING="USER.RANK" VALUE="0" />
+      <PARAMETER ID="LEAVE_DAYS" DISPLAY="請假天數" TYPE="decimal" BINDING="" VALUE="0" />
+    </PARAMETERS>
+  </RULE_ENGINE>
+</PRIMAX>

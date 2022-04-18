@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PRIMAX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RULE_ENGINE>
+    <RULES>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("P")==0]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="DAYS"><![CDATA[0]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)<=5]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="DAYS"><![CDATA[0]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=6 && #RANK#.substr(1)<=8 && #APPLICANT_RANK#.indexOf("P")==0 && #APPLICANT_RANK#.substr(1)<=5]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="DAYS"><![CDATA[2]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=6 && #RANK#.substr(1)<=8 && #APPLICANT_RANK#.indexOf("L")==0 && #APPLICANT_RANK#.substr(1)<=5]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="DAYS"><![CDATA[2]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=9 && #RANK#.substr(1)<=10 && #APPLICANT_RANK#.indexOf("P")==0 && #APPLICANT_RANK#.substr(1)>=6]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="DAYS"><![CDATA[2]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=9 && #RANK#.substr(1)<=10 && #APPLICANT_RANK#.indexOf("L")==0 && #APPLICANT_RANK#.substr(1)>=6]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="DAYS"><![CDATA[2]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=9 && #RANK#.substr(1)<=11 && #APPLICANT_RANK#.indexOf("P")==0 && #APPLICANT_RANK#.substr(1)<=5]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="DAYS"><![CDATA[]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=9 && #RANK#.substr(1)<=11 && #APPLICANT_RANK#.indexOf("L")==0 && #APPLICANT_RANK#.substr(1)<=5]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="DAYS"><![CDATA[]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=12 && #RANK#.substr(1)<=13 && #APPLICANT_RANK#.indexOf("P")==0 && #APPLICANT_RANK#.substr(1)>=6]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="DAYS"><![CDATA[]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+      <RULE>
+        <CONDITION><![CDATA[#RANK#.indexOf("L")==0 && #RANK#.substr(1)>=12 && #RANK#.substr(1)<=13 && #APPLICANT_RANK#.indexOf("L")==0 && #APPLICANT_RANK#.substr(1)>=6]]></CONDITION>
+        <ACTIONS>
+          <ACTION RESULT="true">
+            <EXPRESSION PARAMETER="DAYS"><![CDATA[]]></EXPRESSION>
+          </ACTION>
+        </ACTIONS>
+      </RULE>
+    </RULES>
+    <PARAMETERS>
+      <PARAMETER>
+        <ID>APPLICANT_RANK</ID>
+        <DISPLAY>申請人職級</DISPLAY>
+        <TYPE>string</TYPE>
+        <BINDING>$APPLICANT_RANK</BINDING>
+        <VALUE>0</VALUE>
+      </PARAMETER>
+      <PARAMETER>
+        <ID>RANK</ID>
+        <DISPLAY>職級</DISPLAY>
+        <TYPE>string</TYPE>
+        <BINDING>USER.RANK</BINDING>
+        <VALUE>0</VALUE>
+      </PARAMETER>
+      <PARAMETER>
+        <ID>DAYS</ID>
+        <DISPLAY>請假天數</DISPLAY>
+        <TYPE>decimal</TYPE>
+        <BINDING>$LEAVE_DAYS</BINDING>
+        <VALUE>0</VALUE>
+      </PARAMETER>
+    </PARAMETERS>
+  </RULE_ENGINE>
+</PRIMAX>

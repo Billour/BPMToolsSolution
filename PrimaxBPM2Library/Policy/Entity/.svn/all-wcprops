@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity
+END
+CDATA.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity/CDATA.cs
+END
+ExpressionEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity/ExpressionEntity.cs
+END
+PolicyEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity/PolicyEntity.cs
+END
+ActionsEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity/ActionsEntity.cs
+END
+ParameterEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity/ParameterEntity.cs
+END
+BussinessPolicy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity/BussinessPolicy.cs
+END
+ParametersEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity/ParametersEntity.cs
+END
+RuleEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity/RuleEntity.cs
+END
+RulesEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity/RulesEntity.cs
+END
+ActionEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity/ActionEntity.cs
+END
+RuleEngineEntity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Primax_HR/!svn/ver/1/Source%20Code/Primax.HR/PrimaxBPMToolsWeb/PrimaxBPM2Library/Policy/Entity/RuleEngineEntity.cs
+END
